@@ -2,10 +2,11 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 
-const productsRouter = require('./routers/products')
+const routes = require('./routers/index')
+
 
 app.use(bodyParser.json())
-app.use(productsRouter)
+app.use(routes)
 
 
 app.listen(process.env.PORT || 3000, (err) => {

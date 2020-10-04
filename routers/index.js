@@ -1,1 +1,8 @@
-const express = requier('express')
+const express = require('express')
+const router = express.Router()
+
+const products = require('./products')
+
+router.use(products)
+
+module.exports = router
